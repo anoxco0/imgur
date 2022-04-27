@@ -149,7 +149,7 @@ let tags = [
 tags.forEach((el,i)=>{
     let tag  = document.getElementById('tagsDiv');
     const mainDiv = document.createElement('div');
-    mainDiv.style.backgroundImage = "url('https://i.imgur.com/mx3BWVq_d.jpg?maxwidth=800&shape=thumb&fidelity=high')";
+    mainDiv.style.backgroundImage = `url(${el.bg})``;
     const Div = document.createElement('div');
     Div.style.backgroundColor=el.color;
     const div1 = document.createElement('p');
