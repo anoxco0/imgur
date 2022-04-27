@@ -79,13 +79,16 @@
     align-items: center;
 }
 #image_card{
-    line-height: 0;
+    line-height: 20px;
    -webkit-column-count: 5;
    -webkit-column-gap:   20px;
+   -webkit-row-gap:20px;
    -moz-column-count:    5;
    -moz-column-gap:      20px;
+   -moz-row-gap:20px;
    column-count:         5;
    column-gap:           20px;
+   row-gap: 40px;
 }
 #image_card img,
 #image_card video{
