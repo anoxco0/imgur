@@ -96,8 +96,11 @@
   height: auto !important;
   border-radius:5px 5px 0 0;
 }
+.child{
+    background-color:#474a51;
+    margin-top: 20px;
+}
 .name_d{
-    background-color: #474a51;
     padding: 10px;
     border-radius: 0 0 5px 5px;
 }

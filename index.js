@@ -181,11 +181,11 @@ async function appendFun(section, sort, Window, page, showViral,showMature,album
 }
 function displayData(data){
     data.map((ele)=>{
-        console.log(ele)
+        // console.log(ele)
         let div1= document.createElement("div");
         div1.setAttribute("class","child");
-        let imgDiv=document.createElement('div');
-        imgDiv.setAttribute("class","imgdiv");
+        // let imgDiv=document.createElement('div');
+        // imgDiv.setAttribute("class","imgdiv");
         let textDiv=document.createElement('div');
         textDiv.setAttribute("class","textdiv");
         var vid;
@@ -234,8 +234,7 @@ function displayData(data){
             name_div.append(name, count)
         }
 
-        imgDiv.append(vid)
-     div1.append(imgDiv,name_div);
+     div1.append(vid,name_div);
     document.getElementById('image_card').append(div1);
 });
 }
