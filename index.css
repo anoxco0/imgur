@@ -1,0 +1,19 @@
+#tagsDiv{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    overflow: scroll;
+    column-gap: 10px;
+}
+#tagsDiv>div{
+    border: 1px solid red;
+    width: 110px;
+    height: 130px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+#tagsDiv>div>div{
+    width: 110px;
+}
