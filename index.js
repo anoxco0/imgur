@@ -182,27 +182,30 @@ async function appendFun(section, sort, Window, page, showViral,showMature,album
 function displayData(data){
     data.map((ele)=>{
         console.log(ele)
-    let div1= document.createElement("div");
-    div1.setAttribute("class","child");
-    let imgDiv=document.createElement('div');
-    imgDiv.setAttribute("class","imgdiv");
-    let textDiv=document.createElement('div');
-    textDiv.setAttribute("class","textdiv");
-    let name=document.createElement("div");
-    name.textContent=ele.title;
-    name.setAttribute('class',"title")
+        let div1= document.createElement("div");
+        div1.setAttribute("class","child");
+        let imgDiv=document.createElement('div');
+        imgDiv.setAttribute("class","imgdiv");
+        let textDiv=document.createElement('div');
+        textDiv.setAttribute("class","textdiv");
+        var name;
+        if(ele.images){
+            name=document.createElement("div");
+            name.textContent=ele.title;
+            name.setAttribute('class',"title")
+        }
     var vid;
-    if(ele.images&&ele.images[0]&&ele.images[0].type=="image/jpeg"){
-        // imgDiv.style.height=(19/(ele.image[0].width)*100)/ele.image[0].height;
+    if(ele.images&&ele.images[0]&&(ele.images[0].type=="image/jpeg"||ele.images[0].type=="image/png")){
         vid=document.createElement('img');
+        vid.style.width='100%';
         vid.setAttribute("src",ele.images[0].link)
     }
     if(ele.images&&ele.images[0]&&ele.images[0].type=="video/mp4"){
         // imgDiv.style.height=(19/(ele.image[0].width)*100)/ele.image[0].height;
         vid=document.createElement('video');
+        vid.style.width='100%';
         vid.setAttribute("src",ele.images[0].link)
     }
-    vid.style.width='100%';
      imgDiv.append(vid)
      div1.append(imgDiv,name);
     document.getElementById('image_card').append(div1);
