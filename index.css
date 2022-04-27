@@ -94,4 +94,37 @@
 #image_card video{
     width: 100% !important;
   height: auto !important;
+  border-radius:5px 5px 0 0;
 }
+.name_d{
+    background-color: #474a51;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+.counts{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-top: 10px;
+    font-size: 12px;
+    align-items: center;
+}
+.counts>div{
+    display: flex;
+    align-items: center;
+}
+.counts svg{
+    margin-top: 4px;
+    margin-right: 4px;
+}
+.title{
+    overflow: hidden;
+  max-width: 75ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: white;
+  font-weight: 500;
+  background-color: #474a51;
+  font-size: 14px;
+}
+
