@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="./index.css">
 </head>
-<body style="font-family: sans-serif; background-color: #2e3035;">
-   <div class="main"> 
-       <div class="navbar">
+<body style="font-family: sans-serif; background-color: #2e3035;" >
+   <div class="main" > 
+       <div class="navbar" id="Navbar">
         <div class="mainDiv">
             <div class="leftNav">
                 <div class="imgur_icon" onclick="()=>window.href='./index.html'">
@@ -70,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div id="openmenu">
+        <div id="openmenu" >
              <div>New post</div>
              <div>Top Comment</div>
              <div>Sign in</div>
@@ -84,34 +84,39 @@
              </div>
         </div>
        </div>
-       <div class="tag_sec">
-           <h2 class="tag_head">There are more planes in the ocean than submarines in the sky.</h2>
-           <div style="font-size: 16px; color: white; line-height: 16px; font-weight: 700; margin-bottom: 15px;" >EXPLORE TAGS</div>
-           <div id="tagsDiv"></div>
+       <div id="after_navbar">
+           <img class="GoUp" src="//s.imgur.com/images/favicon-32x32.png">
        </div>
-       <div class="body_">
-           <div class="filter">
-               <div id="most_viral">
-                    <div style="color: white; font-size: 18px; font-weight: 600;">MOST VIRAL</div>
-                    <span style="font-size: 40px; color: aliceblue;"  class="material-symbols-outlined">arrow_drop_down</span>
-               </div>
-               <div id="filters">
-                   <div id="popular">
-                       <div style="color: white; font-size: 18px; font-weight: 600;">POPULAR</div>
-                       <span style="font-size: 40px; color: aliceblue;"  class="material-symbols-outlined">arrow_drop_down</span>
-                   </div>
-                   <div id="filters_all">
-                       <div><span style="font-size: 30px; color: gray;"  class="material-symbols-outlined">filter_list</span></div>
-                       <div><span style="font-size: 30px; color: gray;"  class="material-symbols-outlined">smart_screen</span></div>
-                       <div><span style="font-size: 30px; color: gray;"  class="material-symbols-outlined">grid_view</span></div>
-                   </div>
-               </div>
-           </div>
-           <div id="image_card">
-
-           </div>
-       </div>
-   </div>
+       <div id="second_main">
+        <div class="tag_sec">
+            <h2 class="tag_head">There are more planes in the ocean than submarines in the sky.</h2>
+            <div style="font-size: 16px; color: white; line-height: 16px; font-weight: 700; margin-bottom: 15px;" >EXPLORE TAGS</div>
+            <div id="tagsDiv"></div>
+        </div>
+        <div class="body_">
+            <div class="filter" id="filter">
+                <div id="most_viral">
+                     <div >MOST VIRAL</div>
+                     <span  class="material-symbols-outlined">arrow_drop_down</span>
+                </div>
+                <div id="filters">
+                    <div id="popular">
+                        <div>POPULAR</div>
+                        <span  class="material-symbols-outlined">arrow_drop_down</span>
+                    </div>
+                    <div id="filters_all">
+                        <div><span class="material-symbols-outlined">filter_list</span></div>
+                        <div><span class="material-symbols-outlined">smart_screen</span></div>
+                        <div><span class="material-symbols-outlined">grid_view</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="image_card">
+ 
+            </div>
+        </div>
+    </div>
+ </div>
 </body>
 </html>
 <script src="./components/navbar.js"></script>

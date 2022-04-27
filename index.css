@@ -1,3 +1,15 @@
+#after_navbar{
+    display: none;
+    position: fixed;
+    background-image: url('https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png');
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+}
+#second_main{
+    margin-top: 70px;
+}
 .tag_sec{
     width: 90%;
     margin: auto;
@@ -65,6 +77,21 @@
     display: flex;
     align-items: center;
 }
+#most_viral>div,
+#popular>div{
+    font-size: 18px;
+    font-weight: 600;
+    color:white;
+}
+#most_viral span,
+#popular span{
+    font-size: 40px;
+    color:white;
+}
+#filters_all span{
+     font-size: 30px;
+     color: gray;
+}
 #filters{
     display: flex;
     gap: 20px;
@@ -131,4 +158,74 @@
   background-color: #474a51;
   font-size: 14px;
 }
-
+@media only screen and (max-width:1250px){
+    #image_card{
+       -webkit-column-count: 4;
+       -moz-column-count:    4;
+       column-count:         4;
+    }
+}
+@media only screen and (max-width:1100px){
+    #image_card{
+       -webkit-column-count: 3;
+       -moz-column-count:    3;
+       column-count:         3;
+    }
+}
+@media only screen and (max-width:930px){
+    #image_card{
+       -webkit-column-count: 2;
+       -moz-column-count:    2;
+       column-count:         2;
+    }
+}
+@media only screen and (max-width:760px){
+    .body_{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:580px){
+    .body_{
+         width: 70%;
+    }
+    #most_viral>div,
+    #popular>div{
+        font-size: 14px;
+    }
+    #filters_all span{
+        font-size: 20px;
+   }
+   #most_viral span,
+#popular span{
+    font-size: 20px;
+}
+}
+@media only screen and (max-width:500px){
+    #image_card{
+       -webkit-column-count: 1;
+       -moz-column-count:    1;
+       column-count:         1;
+    }
+    .GoUp{
+     width: 20px;
+    }
+    #after_navbar{
+        padding: 5px 10px;
+    }
+}
+@media only screen and (max-width:340px){
+    .body_{
+         width: 70%;
+    }
+    #most_viral>div,
+    #popular>div{
+        font-size: 10px;
+    }
+    #filters_all span{
+        font-size: 15px;
+   }
+   #most_viral span,
+#popular span{
+    font-size: 15px;
+}
+}

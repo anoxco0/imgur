@@ -145,6 +145,24 @@ let tags = [
     },
 ]
 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  if (document.documentElement.scrollTop > 220) {
+    document.getElementById('Navbar').style.position="absolute";
+    document.getElementById('after_navbar').style.display='block';
+    let nav = document.getElementById('filter');
+    nav.style.position='fixed';
+    nav.style.top = '10px';
+    nav.style.width='85%'
+  } else {
+    document.getElementById('after_navbar').style.display='none';
+    document.getElementById('Navbar').style.position="fixed";
+    let nav = document.getElementById('filter');
+    nav.style.position='relative';
+    nav.style.backgroundImage='transparent';
+  }
+}
 
 tags.forEach((el,i)=>{
     let tag  = document.getElementById('tagsDiv');
@@ -173,7 +191,7 @@ async function appendFun(section, sort, Window, page, showViral,showMature,album
         const res = await fetch(url);
         let data = await res.json();
         data= data.data;
-        console.log(data)
+        // console.log(data)
         displayData(data)
     } catch (error) {
         console.log(error);
