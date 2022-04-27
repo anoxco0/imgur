@@ -195,6 +195,7 @@ function displayData(data){
     if(ele.images&&ele.images[0]&&ele.images[0].type=="image/jpeg"){
         // imgDiv.style.height=(19/(ele.image[0].width)*100)/ele.image[0].height;
         vid=document.createElement('img');
+        vid.style.width='100%';
         vid.setAttribute("src",ele.images[0].link)
     }
     if(ele.images&&ele.images[0]&&ele.images[0].type=="video/mp4"){
