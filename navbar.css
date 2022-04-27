@@ -34,7 +34,7 @@
 }
 .newPost_btn{
     display: flex;
-    padding:9px 15px;
+    padding:7px 15px;
     background-color: #1BB76E;
     border-radius: 3px;
     color: white;
@@ -58,7 +58,7 @@
 }
 .searchbar{
     display: flex;
-    padding: 10px 15px;
+    padding: 7px 15px;
     background-color: rgba(255, 255, 255, 0.166);
     border-radius: 3px;
     width: 100%;
@@ -102,7 +102,7 @@
     color: white;
     font-size: 15px;
     font-weight: 700;
-    padding: 10px;
+    padding: 7px 10px;
     border: transparent;
     border-radius: 3px;
 }
@@ -116,7 +116,7 @@
 .navSignup button{
     font-size: 15px;
     font-weight: 700;
-    padding: 10px 14px;
+    padding: 7px 14px;
     cursor: pointer;
     background-color: #1BB76E;
     border-radius: 4px;

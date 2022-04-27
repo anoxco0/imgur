@@ -51,10 +51,13 @@
     color: rgba(255, 255, 255, 0.686);
     padding-bottom: 12px;
 }
-
+.body_{
+  width: 85%;
+  margin: auto;
+}
 .filter{
-    width: 85%;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
     display: flex;
     justify-content: space-between;
 }
@@ -74,4 +77,11 @@
     display: flex;
     gap: 20px;
     align-items: center;
+}
+#image_card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,19%);
+    grid-column-gap: 1.25%;
+    grid-row-gap: 20px;
 }
