@@ -191,7 +191,6 @@ async function appendFun(section, sort, Window, page, showViral,showMature,album
         const res = await fetch(url);
         let data = await res.json();
         data= data.data;
-        // console.log(data)
         displayData(data)
     } catch (error) {
         console.log(error);
@@ -214,9 +213,11 @@ function displayData(data){
         }
         if(ele.images&&ele.images[0]&&ele.images[0].type=="video/mp4"){
             // imgDiv.style.height=(19/(ele.image[0].width)*100)/ele.image[0].height;
-            vid=document.createElement('video');
+            vid=document.createElement('VIDEO');
             vid.style.width='100%';
-            vid.setAttribute("src",ele.images[0].link);
+            let source = document.createElement('source');
+            source.setAttribute("src",ele.images[0].link);
+            vid.append(source);
             vid.autoplay=true;
         }
         var name;
