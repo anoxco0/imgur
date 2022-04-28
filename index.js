@@ -216,7 +216,8 @@ function displayData(data){
             // imgDiv.style.height=(19/(ele.image[0].width)*100)/ele.image[0].height;
             vid=document.createElement('video');
             vid.style.width='100%';
-            vid.setAttribute("src",ele.images[0].link)
+            vid.setAttribute("src",ele.images[0].link);
+            vid.autoplay=true;
         }
         var name;
         if(ele.images){
