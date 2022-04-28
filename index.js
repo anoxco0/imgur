@@ -219,6 +219,8 @@ function displayData(data){
             source.setAttribute("src",ele.images[0].link);
             vid.append(source);
             vid.autoplay=true;
+            vid.controls=false;
+            vid.muted = true;
         }
         var name;
         if(ele.images){
