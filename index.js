@@ -162,6 +162,7 @@ function myFunction() {
     nav.style.position='relative';
     nav.style.backgroundImage='transparent';
   }
+  
 }
 
 tags.forEach((el,i)=>{
@@ -221,6 +222,7 @@ function displayData(data){
             vid.autoplay=true;
             vid.controls=false;
             vid.muted = true;
+            vid.loop=true;
         }
         var name;
         if(ele.images){
