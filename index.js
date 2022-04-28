@@ -144,9 +144,18 @@ let tags = [
         color:"#328d67",
     },
 ]
-
+var page = 1;
+var page_loading = false;
+window.addEventListener('scroll',()=>{
+    console.log("scrolled", window.scrollY) //scrolled from top
+    console.log(window.innerHeight) //visible part of screen
+    console.log(document.documentElement.scrollHeight)
+    if(!page_loading&&(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight)){
+        ++page;
+        appendFun('hot','-viral','window',page, true, true, true )
+    }
+})
 window.onscroll = function() {myFunction()};
-
 function myFunction() {
   if (document.documentElement.scrollTop > 220) {
     document.getElementById('Navbar').style.position="absolute";
@@ -179,16 +188,13 @@ tags.forEach((el,i)=>{
     mainDiv.append(Div);
     tag.append(mainDiv);
 });
-// https://api.imgur.com/post/v1/posts?client_id=546c25a59c58ad7&filter%5Bsection%5D=eq%3Ahot&include=adtiles%2Cadconfig%2Ccover%2Cviral&location=desktophome&page=1&sort=-viral
-// https://api.imgur.com/3/gallery/{{section}}/{{sort}}/{{window}}/{{page}}?showViral={{showViral}}&mature={{showMature}}&album_previews={{albumPreviews}}
-// https://api.imgur.com/3/gallery/hot/-viral/window/1?client_id=546c25a59c58ad7&showViral=true&mature=true&album_previews=true' 
-let [section, sort, Window, page, showViral,showMature,albumPreviews] = ['hot','-viral','window', 1, true, true, true ]
+let [section, sort, Window, showViral,showMature,albumPreviews] = ['hot','-viral','window', true, true, true ]
 appendFun(section, sort, Window, page, showViral,showMature,albumPreviews);
 async function appendFun(section, sort, Window, page, showViral,showMature,albumPreviews){
     try {
-        // console.log(section, sort, Window, page, showViral,showMature,albumPreviews)
-        // let url1 = `https://api.imgur.com/post/v1/posts?client_id=546c25a59c58ad7&filter%5Bsection%5D=eq%3A${section}&include=adtiles%2Cadconfig%2Ccover%2Cviral&location=desktophome&page=${page}&sort=${sort}`
-        let url = `https://api.imgur.com/3/gallery/${section}/${sort}/${Window}/${page}?client_id=546c25a59c58ad7&showViral=${showViral}&mature=${showMature}&album_previews=${albumPreviews}`
+        page_loading=true;
+       let url = `https://api.imgur.com/3/gallery/${section}/${sort}/${Window}/${page}?client_id=546c25a59c58ad7&showViral=${showViral}&mature=${showMature}&album_previews=${albumPreviews}`
+        console.log(url);
         const res = await fetch(url);
         let data = await res.json();
         data= data.data;
@@ -198,6 +204,7 @@ async function appendFun(section, sort, Window, page, showViral,showMature,album
     }
 }
 function displayData(data){
+    page_loading=false;
     data.map((ele)=>{
         // console.log(ele)
         let div1= document.createElement("div");
